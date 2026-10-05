@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Fractal Batik Generator</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <div>
+        <h1>🧵 KESMAN BATIK</h1>
+        <p>Generator Batik Fraktal Berbasis Matematika Diskrit</p>
+    </div>
+
+    <div class="matdis">
+        PROJEK MATDIS
+    </div>
+</header>
+
+
+<main>
+
+    <!-- PANEL KONTROL -->
+    <aside class="controls">
+
+        <h2>🎨 Pengaturan</h2>
+
+
+        <label>Motif</label>
+
+        <select id="motif">
+
+            <option value="kawung">
+                Kawung Fraktal
+            </option>
+
+            <option value="ceplok">
+                Ceplok Fraktal
+            </option>
+
+            <option value="parang">
+                Parang Fraktal
+            </option>
+
+        </select>
+
+
+        <label>
+            Iterasi
+            <span id="iterationText">3</span>
+        </label>
+
+        <input
+            type="range"
+            id="iteration"
+            min="1"
+            max="6"
+            value="3"
+        >
+
+
+        <label>
+            Skala
+            <span id="scaleText">70</span>
+        </label>
+
+        <input
+            type="range"
+            id="scale"
+            min="45"
+            max="100"
+            value="70"
+        >
+
+
+        <label>
+            Jarak Motif
+            <span id="spacingText">90</span>
+        </label>
+
+        <input
+            type="range"
+            id="spacing"
+            min="60"
+            max="140"
+            value="90"
+        >
+
+
+        <label>Warna</label>
+
+        <select id="palette">
+
+            <option value="sogan">
+                🟤 Sogan
+            </option>
+
+            <option value="indigo">
+                🔵 Indigo
+            </option>
+
+            <option value="hijau">
+                🟢 Hijau
+            </option>
+
+            <option value="merah">
+                🔴 Merah
+            </option>
+
+            <option value="klasik">
+                ⚫ Klasik
+            </option>
+
+        </select>
+
+
+        <div class="buttons">
+
+            <button
+                id="generate"
+                class="primary"
+            >
+                ✨ Generate
+            </button>
+
+            <button
+                id="random"
+                class="secondary"
+            >
+                🎲 Acak
+            </button>
+
+        </div>
+
+
+        <button
+            id="download"
+            class="download"
+        >
+            ⬇️ Download PNG
+        </button>
+
+
+        <!-- PENJELASAN -->
+        <div class="theory">
+
+            <h3>📐 Konsep Fraktal</h3>
+
+            <p>
+                <b>Motif dasar</b> dibuat terlebih dahulu.
+            </p>
+
+            <p>
+                Motif yang sama kemudian dibuat kembali
+                dengan ukuran lebih kecil.
+            </p>
+
+            <p>
+                Proses tersebut dilakukan secara
+                <b>rekursif</b>.
+            </p>
+
+            <p>
+                Motif fraktal kemudian diulang untuk
+                membentuk pola kain batik.
+            </p>
+
+        </div>
+
+    </aside>
+
+
+    <!-- CANVAS -->
+    <section class="canvas-section">
+
+        <div class="canvas-title">
+
+            <div>
+                <h2>Motif Batik Fraktal</h2>
+
+                <p>
+                    Rekursi + Transformasi + Pengulangan
+                </p>
+            </div>
+
+            <span id="status">
+                Siap
+            </span>
+
+        </div>
+
+
+        <div class="canvas-container">
+
+            <canvas
+                id="canvas"
+                width="1000"
+                height="700"
+            ></canvas>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<!-- PENJELASAN MATDIS -->
+
+<section class="explanation">
+
+    <h2>🧠 Mengapa Ini Disebut Batik Fraktal?</h2>
+
+    <div class="cards">
+
+        <div class="card">
+
+            <span>01</span>
+
+            <h3>Motif Dasar</h3>
+
+            <p>
+                Program membuat motif dasar seperti
+                Kawung, Ceplok, atau Parang.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <span>02</span>
+
+            <h3>Rekursi</h3>
+
+            <p>
+                Motif yang sama dipanggil kembali
+                dengan ukuran yang lebih kecil.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <span>03</span>
+
+            <h3>Iterasi</h3>
+
+            <p>
+                Setiap iterasi menambahkan tingkat
+                struktur baru pada motif.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <span>04</span>
+
+            <h3>Transformasi</h3>
+
+            <p>
+                Motif menggunakan translasi, rotasi,
+                dan perubahan skala.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
